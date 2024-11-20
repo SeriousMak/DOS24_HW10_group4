@@ -1,6 +1,5 @@
 #!/bin/bash  
 case "\$1" in  
-  case "\$1" in  
   1)  
     read -p "Enter username to add: " username  
     sudo useradd "$username"  
