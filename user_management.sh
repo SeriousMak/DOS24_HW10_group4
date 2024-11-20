@@ -9,7 +9,10 @@ case "\$1" in
   2)  
   echo "smth" 
   3)  
-  echo "smth" 
+  read -p "Enter username to change password: " username  
+    sudo passwd "$username"  
+    echo "Password changed for user $username."  
+    ;;  
   4)  
   echo "List of users:"  
     cut -d: -f1 /etc/passwd  

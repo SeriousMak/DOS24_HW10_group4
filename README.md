@@ -4,6 +4,7 @@ This repository contains the user_management.sh script with the following functi
 user_management.sh <param1-4>
 param1 - adding a user
 param2 - deleting a user 
-param1 - change password
+<<<<<<< HEAD
+param3 - change password
 param4 - list of users
-```
+
