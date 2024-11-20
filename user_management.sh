@@ -1,7 +1,11 @@
 #!/bin/bash  
 case "\$1" in  
+  case "\$1" in  
   1)  
-  echo "smth" 
+    read -p "Enter username to add: " username  
+    sudo useradd "$username"  
+    echo "User $username added."  
+    ;;   
   2)  
   echo "smth" 
   3)  
