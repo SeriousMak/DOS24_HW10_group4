@@ -6,7 +6,12 @@ case "$1" in
     echo "User $username added."
     ;;
   2)
-    echo "smth"  # Добавлен ;;
+    read -p "Enter username to delete: " username
+    if id "$username" &> /dev/null; then
+        sudo userdel -r "$username" 2>/dev/null || echo "Error deleting user $username"
+    else
+        echo "Error: User '$username' does not exist."
+    fi
     ;;
   3)
     read -p "Enter username to change password: " username
@@ -19,5 +24,6 @@ case "$1" in
     ;;
   *)
     echo "Invalid option. Please use 1-4."
-    ;; # Добавлен ;; - важно для правильной работы case
+    ;;
 esac
+
